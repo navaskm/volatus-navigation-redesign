@@ -4,53 +4,56 @@ export default function Home() {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-primary-900 via-primary-800 to-primary-700 text-white">
-        <div className="container mx-auto px-4 py-24 lg:py-32">
+      <section className="relative bg-gradient-to-br from-dark-50 via-dark-100 to-dark-50 text-white overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-r from-neon-purple/10 via-neon-blue/10 to-neon-pink/10"></div>
+        <div className="container mx-auto px-4 py-24 lg:py-32 relative z-10">
           <div className="max-w-3xl">
             <h1 className="text-5xl lg:text-6xl font-bold mb-6 leading-tight">
               Advanced Drone Solutions
               <br />
-              <span className="text-primary-300">for Modern Industries</span>
+              <span className="text-glow-purple text-transparent bg-clip-text bg-gradient-to-r from-neon-purple via-neon-blue to-neon-pink">
+                for Modern Industries
+              </span>
             </h1>
-            <p className="text-xl mb-8 text-gray-200">
+            <p className="text-xl mb-8 text-gray-300">
               Leading provider of comprehensive drone equipment, professional services, and expert training
               solutions. Empowering businesses with cutting-edge aerial technology.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Link
                 href="/equipment"
-                className="bg-white text-primary-700 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors text-center"
+                className="bg-gradient-neon hover:shadow-neon-purple text-white px-8 py-3 rounded-lg font-semibold transition-all text-center"
               >
                 Explore Equipment
               </Link>
               <Link
                 href="/service"
-                className="bg-primary-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-primary-500 transition-colors text-center border-2 border-white"
+                className="bg-dark-200 border-2 border-neon-purple text-white px-8 py-3 rounded-lg font-semibold hover:bg-dark-300 hover:shadow-neon-purple transition-all text-center"
               >
                 Our Services
               </Link>
             </div>
           </div>
         </div>
-        <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-white to-transparent"></div>
+        <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-dark-50 to-transparent"></div>
       </section>
 
       {/* Services Overview */}
-      <section className="py-20 bg-white">
+      <section className="py-20 bg-dark-50">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">Our Core Services</h2>
-            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+            <h2 className="text-4xl font-bold text-white mb-4">Our Core Services</h2>
+            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
               Comprehensive solutions tailored to meet your industry needs
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {/* Equipment Card */}
-            <div className="bg-gray-50 rounded-xl p-8 hover:shadow-xl transition-shadow">
-              <div className="w-16 h-16 bg-primary-100 rounded-lg flex items-center justify-center mb-6">
+            <div className="bg-dark-200 border border-dark-300 rounded-xl p-8 hover:shadow-neon-purple hover:border-neon-purple transition-all">
+              <div className="w-16 h-16 bg-gradient-to-br from-neon-purple to-neon-blue rounded-lg flex items-center justify-center mb-6 shadow-neon-purple">
                 <svg
-                  className="w-8 h-8 text-primary-600"
+                  className="w-8 h-8 text-white"
                   fill="none"
                   stroke="currentColor"
                   viewBox="0 0 24 24"
@@ -63,14 +66,14 @@ export default function Home() {
                   />
                 </svg>
               </div>
-              <h3 className="text-2xl font-bold text-gray-900 mb-4">Equipment</h3>
-              <p className="text-gray-600 mb-6">
+              <h3 className="text-2xl font-bold text-white mb-4">Equipment</h3>
+              <p className="text-gray-400 mb-6">
                 Premium drones, specialist payloads, software solutions, and accessories from leading manufacturers.
                 Vetted and tested for professional use.
               </p>
               <Link
                 href="/equipment"
-                className="text-primary-600 font-semibold hover:text-primary-700 inline-flex items-center"
+                className="text-neon-purple font-semibold hover:text-neon-blue inline-flex items-center"
               >
                 Learn More
                 <svg className="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -80,10 +83,10 @@ export default function Home() {
             </div>
 
             {/* Service Card */}
-            <div className="bg-gray-50 rounded-xl p-8 hover:shadow-xl transition-shadow">
-              <div className="w-16 h-16 bg-primary-100 rounded-lg flex items-center justify-center mb-6">
+            <div className="bg-dark-200 border border-dark-300 rounded-xl p-8 hover:shadow-neon-blue hover:border-neon-blue transition-all">
+              <div className="w-16 h-16 bg-gradient-to-br from-neon-blue to-neon-cyan rounded-lg flex items-center justify-center mb-6 shadow-neon-blue">
                 <svg
-                  className="w-8 h-8 text-primary-600"
+                  className="w-8 h-8 text-white"
                   fill="none"
                   stroke="currentColor"
                   viewBox="0 0 24 24"
@@ -96,14 +99,14 @@ export default function Home() {
                   />
                 </svg>
               </div>
-              <h3 className="text-2xl font-bold text-gray-900 mb-4">Professional Services</h3>
-              <p className="text-gray-600 mb-6">
+              <h3 className="text-2xl font-bold text-white mb-4">Professional Services</h3>
+              <p className="text-gray-400 mb-6">
                 Expert inspection services, bespoke aerial solutions, and cargo delivery services. Certified
                 pilots and cutting-edge technology.
               </p>
               <Link
                 href="/service"
-                className="text-primary-600 font-semibold hover:text-primary-700 inline-flex items-center"
+                className="text-neon-blue font-semibold hover:text-neon-cyan inline-flex items-center"
               >
                 Learn More
                 <svg className="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -113,10 +116,10 @@ export default function Home() {
             </div>
 
             {/* Academy Card */}
-            <div className="bg-gray-50 rounded-xl p-8 hover:shadow-xl transition-shadow">
-              <div className="w-16 h-16 bg-primary-100 rounded-lg flex items-center justify-center mb-6">
+            <div className="bg-dark-200 border border-dark-300 rounded-xl p-8 hover:shadow-neon-pink hover:border-neon-pink transition-all">
+              <div className="w-16 h-16 bg-gradient-to-br from-neon-pink to-neon-purple rounded-lg flex items-center justify-center mb-6 shadow-neon-pink">
                 <svg
-                  className="w-8 h-8 text-primary-600"
+                  className="w-8 h-8 text-white"
                   fill="none"
                   stroke="currentColor"
                   viewBox="0 0 24 24"
@@ -129,14 +132,14 @@ export default function Home() {
                   />
                 </svg>
               </div>
-              <h3 className="text-2xl font-bold text-gray-900 mb-4">Academy</h3>
-              <p className="text-gray-600 mb-6">
+              <h3 className="text-2xl font-bold text-white mb-4">Academy</h3>
+              <p className="text-gray-400 mb-6">
                 Comprehensive pilot training and specialist certification programs. Industry-leading curriculum
                 for both beginners and advanced operators.
               </p>
               <Link
                 href="/academy"
-                className="text-primary-600 font-semibold hover:text-primary-700 inline-flex items-center"
+                className="text-neon-pink font-semibold hover:text-neon-purple inline-flex items-center"
               >
                 Learn More
                 <svg className="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -149,11 +152,11 @@ export default function Home() {
       </section>
 
       {/* Industries Section */}
-      <section className="py-20 bg-gray-50">
+      <section className="py-20 bg-dark-100">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">Serving Multiple Industries</h2>
-            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+            <h2 className="text-4xl font-bold text-white mb-4">Serving Multiple Industries</h2>
+            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
               Tailored solutions for diverse industry needs
             </p>
           </div>
@@ -172,9 +175,9 @@ export default function Home() {
             ].map((industry) => (
               <div
                 key={industry}
-                className="bg-white rounded-lg p-6 text-center hover:shadow-lg transition-shadow cursor-pointer"
+                className="bg-dark-200 border border-dark-300 rounded-lg p-6 text-center hover:shadow-neon-purple hover:border-neon-purple transition-all cursor-pointer"
               >
-                <h3 className="font-semibold text-gray-900">{industry}</h3>
+                <h3 className="font-semibold text-white">{industry}</h3>
               </div>
             ))}
           </div>
@@ -182,7 +185,7 @@ export default function Home() {
           <div className="text-center mt-12">
             <Link
               href="/industries"
-              className="inline-block bg-primary-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-primary-700 transition-colors"
+              className="inline-block bg-gradient-neon hover:shadow-neon-purple text-white px-8 py-3 rounded-lg font-semibold transition-all"
             >
               View All Industries
             </Link>
@@ -191,10 +194,10 @@ export default function Home() {
       </section>
 
       {/* Features Section */}
-      <section className="py-20 bg-white">
+      <section className="py-20 bg-dark-50">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
-            <h2 className="text-4xl font-bold text-gray-900 mb-12 text-center">Why Choose Volatus Aerospace?</h2>
+            <h2 className="text-4xl font-bold text-white mb-12 text-center">Why Choose Volatus Aerospace?</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               {[
                 {
@@ -215,9 +218,9 @@ export default function Home() {
                 },
               ].map((feature, index) => (
                 <div key={index} className="flex items-start space-x-4">
-                  <div className="flex-shrink-0 w-12 h-12 bg-primary-100 rounded-lg flex items-center justify-center">
+                  <div className="flex-shrink-0 w-12 h-12 bg-gradient-neon rounded-lg flex items-center justify-center shadow-neon-purple">
                     <svg
-                      className="w-6 h-6 text-primary-600"
+                      className="w-6 h-6 text-white"
                       fill="none"
                       stroke="currentColor"
                       viewBox="0 0 24 24"
@@ -231,8 +234,8 @@ export default function Home() {
                     </svg>
                   </div>
                   <div>
-                    <h3 className="text-xl font-bold text-gray-900 mb-2">{feature.title}</h3>
-                    <p className="text-gray-600">{feature.description}</p>
+                    <h3 className="text-xl font-bold text-white mb-2">{feature.title}</h3>
+                    <p className="text-gray-400">{feature.description}</p>
                   </div>
                 </div>
               ))}
@@ -242,22 +245,23 @@ export default function Home() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-primary-600 text-white">
-        <div className="container mx-auto px-4 text-center">
-          <h2 className="text-4xl font-bold mb-6">Ready to Get Started?</h2>
-          <p className="text-xl mb-8 text-primary-100 max-w-2xl mx-auto">
+      <section className="py-20 bg-gradient-to-br from-dark-100 via-dark-50 to-dark-100 text-white relative overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-r from-neon-purple/20 via-neon-blue/20 to-neon-pink/20"></div>
+        <div className="container mx-auto px-4 text-center relative z-10">
+          <h2 className="text-4xl font-bold mb-6 text-glow-purple">Ready to Get Started?</h2>
+          <p className="text-xl mb-8 text-gray-300 max-w-2xl mx-auto">
             Contact us today to discuss how our drone solutions can benefit your business
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               href="/contact"
-              className="bg-white text-primary-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
+              className="bg-gradient-neon hover:shadow-neon-purple text-white px-8 py-3 rounded-lg font-semibold transition-all"
             >
               Contact Us
             </Link>
             <Link
               href="/service"
-              className="bg-primary-700 text-white px-8 py-3 rounded-lg font-semibold hover:bg-primary-800 transition-colors border-2 border-white"
+              className="bg-dark-200 border-2 border-neon-purple text-white px-8 py-3 rounded-lg font-semibold hover:bg-dark-300 hover:shadow-neon-purple transition-all"
             >
               Request a Quote
             </Link>

@@ -179,7 +179,7 @@ export default function Header() {
           <>
             <button
               onClick={() => handleDropdownToggle(item.label)}
-              className="flex items-center gap-1 px-4 py-2 text-gray-700 hover:text-primary-600 transition-colors font-medium w-full text-left"
+              className="flex items-center gap-1 px-4 py-2 text-gray-300 hover:text-neon-purple transition-colors font-medium w-full text-left hover:bg-dark-300 rounded-lg"
             >
               {item.label}
               <svg
@@ -195,7 +195,7 @@ export default function Header() {
               <ul
                 className={`${
                   level === 0 && !isMobile
-                    ? "absolute left-0 top-full mt-1 w-64 bg-white shadow-lg rounded-lg py-2 z-50 hidden group-hover:block"
+                    ? "absolute left-0 top-full mt-1 w-64 bg-dark-200 border border-dark-300 shadow-neon-purple rounded-lg py-2 z-50 hidden group-hover:block"
                     : isMobile && isActive
                     ? "block pl-4 mt-1"
                     : "hidden"
@@ -208,7 +208,7 @@ export default function Header() {
         ) : (
           <Link
             href={item.href}
-            className="block px-4 py-2 text-gray-700 hover:text-primary-600 transition-colors font-medium"
+            className="block px-4 py-2 text-gray-300 hover:text-neon-purple transition-colors font-medium hover:bg-dark-300 rounded-lg"
             onClick={() => setMobileMenuOpen(false)}
           >
             {item.label}
@@ -219,15 +219,15 @@ export default function Header() {
   };
 
   return (
-    <header className="bg-white shadow-md sticky top-0 z-50">
+    <header className="bg-dark-50 border-b border-dark-300 sticky top-0 z-50 backdrop-blur-sm bg-opacity-90">
       <nav className="container mx-auto px-4">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
-          <Link href="/" className="flex items-center space-x-2">
-            <div className="w-12 h-12 bg-primary-600 rounded-lg flex items-center justify-center">
+          <Link href="/" className="flex items-center space-x-2 group">
+            <div className="w-12 h-12 bg-gradient-neon rounded-lg flex items-center justify-center shadow-neon-purple group-hover:shadow-glow transition-all">
               <span className="text-white font-bold text-xl">V</span>
             </div>
-            <span className="text-2xl font-bold text-gray-900">Volatus Aerospace</span>
+            <span className="text-2xl font-bold text-white group-hover:text-neon-purple transition-colors">Volatus Aerospace</span>
           </Link>
 
           {/* Desktop Navigation */}
@@ -238,17 +238,17 @@ export default function Header() {
           {/* Language Toggle & Mobile Menu Button */}
           <div className="flex items-center space-x-4">
             <div className="hidden md:flex items-center space-x-2">
-              <button className="px-3 py-1 text-sm font-medium text-gray-700 hover:text-primary-600 transition-colors">
+              <button className="px-3 py-1 text-sm font-medium text-neon-purple hover:text-neon-blue transition-colors">
                 EN
               </button>
-              <span className="text-gray-300">|</span>
-              <button className="px-3 py-1 text-sm font-medium text-gray-500 hover:text-primary-600 transition-colors">
+              <span className="text-gray-500">|</span>
+              <button className="px-3 py-1 text-sm font-medium text-gray-500 hover:text-neon-purple transition-colors">
                 FR
               </button>
             </div>
             <button
               onClick={toggleMobileMenu}
-              className="lg:hidden p-2 text-gray-700 hover:text-primary-600 transition-colors"
+              className="lg:hidden p-2 text-gray-300 hover:text-neon-purple transition-colors"
               aria-label="Toggle menu"
             >
               <svg
@@ -269,13 +269,13 @@ export default function Header() {
 
         {/* Mobile Navigation */}
         {mobileMenuOpen && (
-          <div className="lg:hidden py-4 border-t">
+          <div className="lg:hidden py-4 border-t border-dark-300">
             <ul className="space-y-2">
               {navigation.map((item) => renderNavItem(item, 0, true))}
             </ul>
-            <div className="mt-4 pt-4 border-t flex items-center justify-center space-x-2">
-              <button className="px-3 py-1 text-sm font-medium text-primary-600">EN</button>
-              <span className="text-gray-300">|</span>
+            <div className="mt-4 pt-4 border-t border-dark-300 flex items-center justify-center space-x-2">
+              <button className="px-3 py-1 text-sm font-medium text-neon-purple">EN</button>
+              <span className="text-gray-500">|</span>
               <button className="px-3 py-1 text-sm font-medium text-gray-500">FR</button>
             </div>
           </div>

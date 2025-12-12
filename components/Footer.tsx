@@ -30,7 +30,7 @@ const socialLinks = [
 
 export default function Footer() {
   return (
-    <footer className="bg-gray-900 text-gray-300">
+    <footer className="bg-dark-50 border-t border-dark-300 text-gray-300">
       <div className="container mx-auto px-4 py-12">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Contact Information */}
@@ -39,19 +39,19 @@ export default function Footer() {
             <div className="space-y-2">
               <a
                 href="tel:1-833-VOLATUS"
-                className="block hover:text-primary-400 transition-colors"
+                className="block hover:text-neon-purple transition-colors"
               >
                 1-833-VOLATUS
               </a>
               <a
                 href="tel:833-865-2887"
-                className="block hover:text-primary-400 transition-colors"
+                className="block hover:text-neon-purple transition-colors"
               >
                 833-865-2887
               </a>
               <Link
                 href="/pilot-application"
-                className="block hover:text-primary-400 transition-colors"
+                className="block hover:text-neon-purple transition-colors"
               >
                 Drone Pilot Application
               </Link>
@@ -66,7 +66,7 @@ export default function Footer() {
                 <li key={division.name}>
                   <Link
                     href={division.href}
-                    className="hover:text-primary-400 transition-colors text-sm"
+                    className="hover:text-neon-purple transition-colors text-sm"
                   >
                     {division.name}
                   </Link>
@@ -83,7 +83,7 @@ export default function Footer() {
                 <li key={link.name}>
                   <Link
                     href={link.href}
-                    className="hover:text-primary-400 transition-colors text-sm"
+                    className="hover:text-neon-purple transition-colors text-sm"
                   >
                     {link.name}
                   </Link>
@@ -100,7 +100,7 @@ export default function Footer() {
               <input
                 type="email"
                 placeholder="Enter your email"
-                className="w-full px-4 py-2 rounded-lg bg-gray-800 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-primary-500 mb-2"
+                className="w-full px-4 py-2 rounded-lg bg-dark-200 border border-dark-300 text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-neon-purple focus:border-neon-purple mb-2"
               />
               <div className="flex items-center mb-2">
                 <input
@@ -114,7 +114,7 @@ export default function Footer() {
               </div>
               <button
                 type="submit"
-                className="w-full bg-primary-600 hover:bg-primary-700 text-white font-medium py-2 px-4 rounded-lg transition-colors"
+                className="w-full bg-gradient-neon hover:shadow-neon-purple text-white font-medium py-2 px-4 rounded-lg transition-all"
               >
                 SUBSCRIBE
               </button>
@@ -126,7 +126,7 @@ export default function Footer() {
                 <a
                   key={social.name}
                   href={social.href}
-                  className="w-10 h-10 bg-gray-800 hover:bg-primary-600 rounded-full flex items-center justify-center transition-colors"
+                  className="w-10 h-10 bg-dark-200 border border-dark-300 hover:bg-gradient-neon hover:shadow-neon-purple rounded-full flex items-center justify-center transition-all"
                   aria-label={social.name}
                 >
                   <span className="text-sm font-semibold">
@@ -142,7 +142,7 @@ export default function Footer() {
         </div>
 
         {/* Bottom Bar */}
-        <div className="border-t border-gray-800 mt-8 pt-8">
+        <div className="border-t border-dark-300 mt-8 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <p className="text-sm text-gray-400 mb-4 md:mb-0">
               © {new Date().getFullYear()} Volatus Aerospace. All rights reserved.
@@ -150,13 +150,13 @@ export default function Footer() {
             <div className="flex space-x-6">
               <Link
                 href="/privacy"
-                className="text-sm hover:text-primary-400 transition-colors"
+                className="text-sm hover:text-neon-purple transition-colors"
               >
                 Privacy Policy
               </Link>
               <Link
                 href="/terms"
-                className="text-sm hover:text-primary-400 transition-colors"
+                className="text-sm hover:text-neon-purple transition-colors"
               >
                 Terms of Service
               </Link>
